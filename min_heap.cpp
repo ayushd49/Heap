@@ -21,16 +21,6 @@ private:
     // Returns the index of right child
     int right(int i) { return 2 * i + 2; }
     
-    // Moves element up the tree to maintain min heap property
-    // Used after insertion
-    void heapifyUp(int i) {
-        // Keep swapping with parent if current element is smaller
-        while (i > 0 && heap[parent(i)] > heap[i]) {
-            swap(heap[i], heap[parent(i)]);
-            i = parent(i);
-        }
-    }
-    
     // Moves element down the tree to maintain min heap property
     // Used after deletion
     void heapifyDown(int i) {
